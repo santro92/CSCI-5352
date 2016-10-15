@@ -9,12 +9,11 @@ for i in xrange( start,  end, diff ):
     adjlist = str(i)+"-subgraph.adjlist"
     G = nx.read_adjlist("../subgraphs/"+adjlist)
 
-    print "Computing betweenness centrality"
-    bc = nx.betweenness_centrality( G, normalized=True )
+    print "Computing clustering"
+    bc = nx.clustering( G )
 
     print "Writing to file " + str(i)
     # write dictionary to file
     import json
-    with open('../centrality/'+adjlist+'-bc.json', 'w') as fp:
+    with open('../clustering/'+adjlist+'-cc.json', 'w') as fp:
         json.dump( bc, fp, sort_keys=True, indent=4)
-
