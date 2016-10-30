@@ -28,6 +28,6 @@ print "Writing to file "
 f = open( "../../results/reciprocity.csv", 'wt' )
 writer = csv.writer(f)
 writer.writerow( ("node_id", "reciprocity") )
-for key in in_deg.keys():
+for key in recip.keys():
     writer.writerow( ( key, recip[key] ) )
 f.close()

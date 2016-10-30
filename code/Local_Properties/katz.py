@@ -10,6 +10,6 @@ print "Writing to file "
 f = open( "../../results/katz.csv", 'wt' )
 writer = csv.writer(f)
 writer.writerow( ("node_id", "katz") )
-for key in in_deg.keys():
+for key in katz.keys():
     writer.writerow( ( key, katz[key] ) )
 f.close()
