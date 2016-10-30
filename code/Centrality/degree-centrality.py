@@ -1,6 +1,6 @@
 import networkx as nx
 
-for i in xrange( 10426, 0, -1 ):
+for i in [0]:#xrange( 10426, 0, -1 ):
     print "Loading graph"
     adjlist = str(i)+"-subgraph.adjlist"
     G = nx.read_adjlist("../subgraphs/"+adjlist)
