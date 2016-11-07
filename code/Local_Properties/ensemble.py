@@ -1,7 +1,7 @@
 import glob
 import pandas as pd
 
-path ='/home/santa/Dropbox/NAM/Project/CSCI-5352/results' # use your path
+path ='../../results' # use your path
 allFiles = glob.glob(path + "/*.csv")
 frame = pd.DataFrame()
 list_ = []
@@ -16,5 +16,5 @@ for file_ in allFiles:
     list_.append(df)
 frame = pd.concat(list_, axis=1)
 print frame.head()
-frame.to_csv("ensemble.csv", separator=',', index=False)
+frame.to_csv("../../results/ensemble.csv", separator=',', index=False)
 print "Done"
